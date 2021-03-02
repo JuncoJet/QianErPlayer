@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QianErPlayer 仙风道骨版</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QSplitter" name="splitter">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QListWidget" name="listWidget">
+        <item>
+         <property name="text">
+          <string>修仙</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>打脸</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>新书</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QListWidget" name="listWidget_2">
+        <property name="contextMenuPolicy">
+         <enum>Qt::CustomContextMenu</enum>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="listWidget_3">
+        <property name="contextMenuPolicy">
+         <enum>Qt::CustomContextMenu</enum>
+        </property>
+        <property name="dragDropMode">
+         <enum>QAbstractItemView::InternalMove</enum>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QAxWidget" name="axWidget">
+       <property name="control" stdset="0">
+        <string>{6bf52a52-394a-11d3-b153-00c04f79faa6}</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_S">
+    <property name="title">
+     <string>设置(&amp;S)</string>
+    </property>
+    <addaction name="action_H"/>
+    <addaction name="action_S"/>
+   </widget>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="action_A"/>
+   </widget>
+   <widget class="QMenu" name="menu_O">
+    <property name="title">
+     <string>打开(&amp;O)</string>
+    </property>
+    <addaction name="action_H_2"/>
+    <addaction name="action_D"/>
+    <addaction name="action_P_2"/>
+   </widget>
+   <widget class="QMenu" name="menu_R">
+    <property name="title">
+     <string>右键(&amp;R)</string>
+    </property>
+    <addaction name="action_P"/>
+    <addaction name="separator"/>
+    <addaction name="action_S_3"/>
+    <addaction name="action_A_3"/>
+   </widget>
+   <widget class="QMenu" name="menu_2_R">
+    <property name="title">
+     <string>右键2(R)</string>
+    </property>
+    <addaction name="action_P"/>
+    <addaction name="action_A_2"/>
+    <addaction name="separator"/>
+    <addaction name="action_D_2"/>
+    <addaction name="action_M"/>
+    <addaction name="action_C"/>
+    <addaction name="separator"/>
+    <addaction name="action_E"/>
+    <addaction name="separator"/>
+    <addaction name="action_S_2"/>
+    <addaction name="action_R"/>
+   </widget>
+   <addaction name="menu_O"/>
+   <addaction name="menu_S"/>
+   <addaction name="menu_H"/>
+   <addaction name="menu_R"/>
+   <addaction name="menu_2_R"/>
+  </widget>
+  <action name="action_A">
+   <property name="text">
+    <string>关于(&amp;A)</string>
+   </property>
+  </action>
+  <action name="action_H">
+   <property name="text">
+    <string>保存播放历史(&amp;H)</string>
+   </property>
+  </action>
+  <action name="action_H_2">
+   <property name="text">
+    <string>播放历史(&amp;H)</string>
+   </property>
+  </action>
+  <action name="action_D">
+   <property name="text">
+    <string>调试窗口(&amp;D)</string>
+   </property>
+  </action>
+  <action name="action_S">
+   <property name="text">
+    <string>自动重排序(&amp;S)</string>
+   </property>
+  </action>
+  <action name="action_P">
+   <property name="text">
+    <string>播放(&amp;P)</string>
+   </property>
+  </action>
+  <action name="action_S_2">
+   <property name="text">
+    <string>正序排序(&amp;S)</string>
+   </property>
+  </action>
+  <action name="action_R">
+   <property name="text">
+    <string>反序排序(&amp;R)</string>
+   </property>
+  </action>
+  <action name="action_A_2">
+   <property name="text">
+    <string>播放全部(&amp;A)</string>
+   </property>
+  </action>
+  <action name="action_E">
+   <property name="text">
+    <string>导出播放单(&amp;E)</string>
+   </property>
+  </action>
+  <action name="action_C">
+   <property name="text">
+    <string>清空列表(&amp;C)</string>
+   </property>
+  </action>
+  <action name="action_D_2">
+   <property name="text">
+    <string>删除选中(&amp;D)</string>
+   </property>
+  </action>
+  <action name="action_A_3">
+   <property name="text">
+    <string>拉取全部(&amp;A)</string>
+   </property>
+  </action>
+  <action name="action_M">
+   <property name="text">
+    <string>删除重复(&amp;M)</string>
+   </property>
+  </action>
+  <action name="action_P_2">
+   <property name="text">
+    <string>外部播放器(&amp;P)</string>
+   </property>
+  </action>
+  <action name="action_S_3">
+   <property name="text">
+    <string>拉取选中(&amp;S)</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QAxWidget</class>
+   <extends>QWidget</extends>
+   <header>qaxwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
