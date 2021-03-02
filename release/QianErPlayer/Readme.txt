@@ -1,7 +1,7 @@
 ﻿QianErPlayer
-支持章节自由多选播放
+支持章节自由选择拉取
 播放列表支持拖动调准顺序 
-9:24 2021/3/2 -by JuncoJet
+16:40 2021/3/2 -by JuncoJet
 
 QianErPlayer
 全新的排序算法和去重算法，体验更佳
