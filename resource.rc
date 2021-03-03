@@ -1,0 +1,4 @@
+#define icon 100
+
+icon ICON DISCARDABLE "icon.ico"
+

@@ -71,6 +71,10 @@ private slots:
 
     void on_action_S_3_triggered();
 
+    void on_listWidget_customContextMenuRequested(const QPoint &pos);
+
+    void on_action_O_triggered();
+
 private:
     Ui::MainWindow *ui;
     QNetworkAccessManager *netmgr;

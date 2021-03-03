@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->menu_R->menuAction()->setVisible(false);
+    ui->menu_1_R->menuAction()->setVisible(false);
     ui->menu_2_R->menuAction()->setVisible(false);
     ui->splitter->setStretchFactor(0,2);
     ui->splitter->setStretchFactor(1,3);
@@ -89,7 +90,7 @@ void MainWindow::funreply(QNetworkReply *reply)
 
 void MainWindow::on_action_A_triggered()
 {
-    QMessageBox::information(this,"","温故而知新，可以为师矣\n\t-by JuncoJet");
+    QMessageBox::about(this,"","温故而知新，可以为师矣\n故事播讲 谦儿2016\n程序 -by JuncoJet");
 }
 
 void MainWindow::on_listWidget_2_doubleClicked(const QModelIndex &index)
@@ -269,5 +270,18 @@ void MainWindow::on_action_S_3_triggered()
                 httpGet(lst[i]);
             }
         }
+    }
+}
+
+void MainWindow::on_listWidget_customContextMenuRequested(const QPoint &pos)
+{
+    ui->menu_1_R->popup(QCursor::pos());
+}
+
+void MainWindow::on_action_O_triggered()
+{
+    for(int i=0;i<ui->listWidget->count();i++){
+        if(ui->listWidget->item(i)->isSelected())
+            ShellExecuteA(0,0,(urlmp+urlparam[i]).toUtf8(),0,0,1);
     }
 }

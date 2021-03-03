@@ -31,3 +31,10 @@ HEADERS  += mainwindow.h
 FORMS    += mainwindow.ui
 
 CONFIG += qaxcontainer
+
+RESOURCES += \
+    resource.qrc
+
+DISTFILES +=
+
+RC_FILE += resource.rc

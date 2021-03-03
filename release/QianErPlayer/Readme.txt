@@ -1,4 +1,9 @@
 ﻿QianErPlayer
+添加程序图标，很黄很暴力的谦儿专用
+添加打开主页功能
+9:55 2021/3/3 -by JuncoJet
+
+QianErPlayer
 支持章节自由选择拉取
 播放列表支持拖动调准顺序 
 16:40 2021/3/2 -by JuncoJet

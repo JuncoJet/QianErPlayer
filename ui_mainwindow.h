@@ -44,6 +44,7 @@ public:
     QAction *action_M;
     QAction *action_P_2;
     QAction *action_S_3;
+    QAction *action_O;
     QWidget *centralWidget;
     QGridLayout *gridLayout;
     QSplitter *splitter_2;
@@ -58,12 +59,16 @@ public:
     QMenu *menu_O;
     QMenu *menu_R;
     QMenu *menu_2_R;
+    QMenu *menu_1_R;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->resize(400, 300);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/new/prefix1/icon.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        MainWindow->setWindowIcon(icon);
         action_A = new QAction(MainWindow);
         action_A->setObjectName(QStringLiteral("action_A"));
         action_H = new QAction(MainWindow);
@@ -96,6 +101,8 @@ public:
         action_P_2->setObjectName(QStringLiteral("action_P_2"));
         action_S_3 = new QAction(MainWindow);
         action_S_3->setObjectName(QStringLiteral("action_S_3"));
+        action_O = new QAction(MainWindow);
+        action_O->setObjectName(QStringLiteral("action_O"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
@@ -113,6 +120,7 @@ public:
         new QListWidgetItem(listWidget);
         new QListWidgetItem(listWidget);
         listWidget->setObjectName(QStringLiteral("listWidget"));
+        listWidget->setContextMenuPolicy(Qt::CustomContextMenu);
         splitter->addWidget(listWidget);
         listWidget_2 = new QListWidget(splitter);
         listWidget_2->setObjectName(QStringLiteral("listWidget_2"));
@@ -147,11 +155,14 @@ public:
         menu_R->setObjectName(QStringLiteral("menu_R"));
         menu_2_R = new QMenu(menuBar);
         menu_2_R->setObjectName(QStringLiteral("menu_2_R"));
+        menu_1_R = new QMenu(menuBar);
+        menu_1_R->setObjectName(QStringLiteral("menu_1_R"));
         MainWindow->setMenuBar(menuBar);
 
         menuBar->addAction(menu_O->menuAction());
         menuBar->addAction(menu_S->menuAction());
         menuBar->addAction(menu_H->menuAction());
+        menuBar->addAction(menu_1_R->menuAction());
         menuBar->addAction(menu_R->menuAction());
         menuBar->addAction(menu_2_R->menuAction());
         menu_S->addAction(action_H);
@@ -175,6 +186,7 @@ public:
         menu_2_R->addSeparator();
         menu_2_R->addAction(action_S_2);
         menu_2_R->addAction(action_R);
+        menu_1_R->addAction(action_O);
 
         retranslateUi(MainWindow);
 
@@ -200,6 +212,7 @@ public:
         action_M->setText(QApplication::translate("MainWindow", "\345\210\240\351\231\244\351\207\215\345\244\215(&M)", Q_NULLPTR));
         action_P_2->setText(QApplication::translate("MainWindow", "\345\244\226\351\203\250\346\222\255\346\224\276\345\231\250(&P)", Q_NULLPTR));
         action_S_3->setText(QApplication::translate("MainWindow", "\346\213\211\345\217\226\351\200\211\344\270\255(&S)", Q_NULLPTR));
+        action_O->setText(QApplication::translate("MainWindow", "\346\211\223\345\274\200\344\270\273\351\241\265(&O)", Q_NULLPTR));
 
         const bool __sortingEnabled = listWidget->isSortingEnabled();
         listWidget->setSortingEnabled(false);
@@ -214,8 +227,9 @@ public:
         menu_S->setTitle(QApplication::translate("MainWindow", "\350\256\276\347\275\256(&S)", Q_NULLPTR));
         menu_H->setTitle(QApplication::translate("MainWindow", "\345\270\256\345\212\251(&H)", Q_NULLPTR));
         menu_O->setTitle(QApplication::translate("MainWindow", "\346\211\223\345\274\200(&O)", Q_NULLPTR));
-        menu_R->setTitle(QApplication::translate("MainWindow", "\345\217\263\351\224\256(&R)", Q_NULLPTR));
-        menu_2_R->setTitle(QApplication::translate("MainWindow", "\345\217\263\351\224\2562(R)", Q_NULLPTR));
+        menu_R->setTitle(QApplication::translate("MainWindow", "\345\217\263\351\224\2562(&R)", Q_NULLPTR));
+        menu_2_R->setTitle(QApplication::translate("MainWindow", "\345\217\263\351\224\2563(R)", Q_NULLPTR));
+        menu_1_R->setTitle(QApplication::translate("MainWindow", "\345\217\263\351\224\2561(R)", Q_NULLPTR));
     } // retranslateUi
 
 };

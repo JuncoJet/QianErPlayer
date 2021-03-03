@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>QianErPlayer 仙风道骨版</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/new/prefix1/icon.ico</normaloff>:/new/prefix1/icon.ico</iconset>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
@@ -25,6 +29,9 @@
         <enum>Qt::Horizontal</enum>
        </property>
        <widget class="QListWidget" name="listWidget">
+        <property name="contextMenuPolicy">
+         <enum>Qt::CustomContextMenu</enum>
+        </property>
         <item>
          <property name="text">
           <string>修仙</string>
@@ -102,7 +109,7 @@
    </widget>
    <widget class="QMenu" name="menu_R">
     <property name="title">
-     <string>右键(&amp;R)</string>
+     <string>右键2(&amp;R)</string>
     </property>
     <addaction name="action_P"/>
     <addaction name="separator"/>
@@ -111,7 +118,7 @@
    </widget>
    <widget class="QMenu" name="menu_2_R">
     <property name="title">
-     <string>右键2(R)</string>
+     <string>右键3(R)</string>
     </property>
     <addaction name="action_P"/>
     <addaction name="action_A_2"/>
@@ -125,9 +132,16 @@
     <addaction name="action_S_2"/>
     <addaction name="action_R"/>
    </widget>
+   <widget class="QMenu" name="menu_1_R">
+    <property name="title">
+     <string>右键1(R)</string>
+    </property>
+    <addaction name="action_O"/>
+   </widget>
    <addaction name="menu_O"/>
    <addaction name="menu_S"/>
    <addaction name="menu_H"/>
+   <addaction name="menu_1_R"/>
    <addaction name="menu_R"/>
    <addaction name="menu_2_R"/>
   </widget>
@@ -211,6 +225,11 @@
     <string>拉取选中(&amp;S)</string>
    </property>
   </action>
+  <action name="action_O">
+   <property name="text">
+    <string>打开主页(&amp;O)</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -220,6 +239,8 @@
    <header>qaxwidget.h</header>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
