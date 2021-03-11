@@ -1,4 +1,8 @@
 ﻿QianErPlayer
+修正内容无法自动更新问题
+9:20 2021/3/11 -by JuncoJet
+
+QianErPlayer
 添加程序图标，很黄很暴力的谦儿专用
 添加打开主页功能
 9:55 2021/3/3 -by JuncoJet

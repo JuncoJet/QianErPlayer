@@ -70,7 +70,7 @@ void MainWindow::funreply(QNetworkReply *reply)
             }
         }else{
             qDebug()<<"false";
-            QRegExp rx("<a.+http://mp.weixin.qq.com/s.+</a>"),u("href=\\\"(.+)\\\"");
+            QRegExp rx("<a.+http://mp.weixin.qq.com/s.+</a>"),u("href=\\\"(.+)\\\""),qx(">(.+)</");
             u.setMinimal(true);
             rx.setMinimal(true);
             int pos=0;
@@ -78,8 +78,13 @@ void MainWindow::funreply(QNetworkReply *reply)
                 if(u.indexIn(rx.cap(0))>-1&&u.cap(1).indexOf("http")>-1){
                     lst.append(u.cap(1).replace("#wechat_redirect","").replace("&amp;","&")
                                .replace("http","https"));
-                    QString nm=rx.cap(0).replace("&nbsp;","").replace(QRegExp(".+;\">"),"")
-                            .replace(QRegExp("<.+"),"").replace(" ","");
+                    QString nm=rx.cap(0).replace("&nbsp;","");
+                    if(nm[0]=="<"){
+                        while(qx.indexIn(nm)>-1){
+                            nm=qx.cap(1);
+                        }
+                    }
+                    nm=nm.replace(QRegExp("<.+>"),"").replace(" ","");
                     ui->listWidget_2->addItem(nm);
                 }
                 pos+=rx.matchedLength();

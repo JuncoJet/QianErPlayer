@@ -27,7 +27,7 @@ public:
     void httpPost(QString url,QString data);
     void httpGet(QString url);
     QString urlmp="https://mp.weixin.qq.com/s/",urlvoice="https://res.wx.qq.com/voice/getvoice?mediaid=";
-    QStringList urlparam={"PvoBqQcOAOS4R1PpPJjl2Q","nJBZB-rEPDuGbQ8tiampdw","wfrOrQKKguqJ0PWBFhpqiA"};
+    QStringList urlparam={"uzxGzhWKNrNutvATzJzLvQ","3V0gefCyYWKs6ALe0wYFOw","l-LP-GerIdN0Ec8uaY9vQQ"};
     QString dbgString,playlst="playlist.m3u";
     QStringList lst;
     QHash<QString,QString> sublst;
